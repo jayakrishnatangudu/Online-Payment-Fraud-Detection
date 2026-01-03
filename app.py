@@ -10,7 +10,7 @@ st.set_page_config(page_title="Fraud Detection", layout="centered")
 st.title("💳 Online Payment Fraud Detection")
 st.write("Enter transaction feature values to predict fraud.")
 
-# Exact feature list (DO NOT change order)
+# EXACT feature list used during training
 feature_names = [
     'V1', 'V2', 'V3', 'V4', 'V5', 'V6', 'V7',
     'V8', 'V9', 'V10', 'V11', 'V12', 'V13', 'V14',
@@ -21,20 +21,18 @@ feature_names = [
 
 st.subheader("Transaction Features")
 
-# Collect user input
+# Collect inputs
 input_data = {}
-
 for feature in feature_names:
     input_data[feature] = st.number_input(
-        label=feature,
+        feature,
         value=0.0,
         format="%.6f"
     )
 
-# Prediction
+# Predict
 if st.button("Predict"):
-    input_df = pd.DataFrame([input_data])  # keeps column order
-
+    input_df = pd.DataFrame([input_data])  # ✅ THIS LINE FIXES THE ERROR
     prediction = model.predict(input_df)
 
     if prediction[0] == 1:
