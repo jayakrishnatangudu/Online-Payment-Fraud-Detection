@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import pandas as pd
+metrics = pickle.load(open("model_metrics.pkl", "rb"))
 
 # Load trained model
 model = pickle.load(open("fraud_model.pkl", "rb"))
@@ -39,3 +40,16 @@ if st.button("Predict"):
         st.error("⚠️ Fraudulent Transaction Detected")
     else:
         st.success("✅ Legitimate Transaction")
+
+
+st.subheader("📊 Model Performance")
+
+col1, col2, col3 = st.columns(3)
+col1.metric("Accuracy", f"{metrics['Accuracy']*100:.2f}%")
+col2.metric("Precision", f"{metrics['Precision']*100:.2f}%")
+col3.metric("Recall", f"{metrics['Recall']*100:.2f}%")
+
+col4, col5 = st.columns(2)
+col4.metric("F1 Score", f"{metrics['F1 Score']:.3f}")
+col5.metric("ROC AUC", f"{metrics['ROC AUC']:.3f}")
+
