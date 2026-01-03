@@ -4,7 +4,6 @@ A machine learning–based web application that classifies online payment transa
 
 🚀 **Live Demo**
 👉 Live Application: https://online-payment-fraud-detection.streamlit.app/
-
 📂 **Source Code**
 👉 GitHub Repository: https://github.com/jayakrishnatangudu/Online-Payment-Fraud-Detection
 
@@ -24,8 +23,7 @@ Fraud cases: 98
 Fraud prevalence: 0.17%
 Features: 29 numerical features (V1–V28, normAmount)
 
-🧪 Model Comparison
-
+🧪 **Model Comparison**
 Three machine learning models were trained and evaluated on the same test set to compare performance on an extremely imbalanced fraud detection dataset.
 | Model               | Accuracy | Precision (Fraud) | Recall (Fraud) | F1 Score | ROC-AUC |
 | ------------------- | -------- | ----------------- | -------------- | -------- | ------- |
@@ -69,22 +67,18 @@ Language: Python
 Libraries: Pandas, NumPy, Scikit-learn
 Deployment: Streamlit Cloud
 
-📂 Project Structure
-├── app.py
-├── fraud_model.pkl
-├── model_metrics.pkl
-├── requirements.txt
-├── Online_Payment_Fraud_Detection.ipynb
-└── README.md
+📂** Project Structure**<br>
+├── app.py<br>
+├── fraud_model.pkl<br>
+├── model_metrics.pkl<br>
+├── requirements.txt<br>
+├── Online_Payment_Fraud_Detection.ipynb<br>
+└── README.md<br>
 
 🛠️** Run Locally**
 pip install -r requirements.txt
 streamlit run app.py
 
-📎** Disclaimer**
-This project is developed for academic and demonstration purposes only and should not be used directly in production financial systems without additional validation, monitoring, and security measures.
 
-👤 **Author**
-Jaya Krishna Tangudu
-📧 jayakrishnatangudu@gmail.com
-🔗 GitHub: https://github.com/jayakrishnatangudu
+
+
