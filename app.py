@@ -9,6 +9,11 @@ model = pickle.load(open("fraud_model.pkl", "rb"))
 st.set_page_config(page_title="Fraud Detection", layout="centered")
 
 st.title("💳 Online Payment Fraud Detection")
+st.link_button(
+    "🔗 View Project on GitHub",
+    "https://github.com/jayakrishnatangudu/Online-Payment-Fraud-Detection"
+)
+
 st.write("Enter transaction feature values to predict fraud.")
 
 # EXACT feature list used during training
